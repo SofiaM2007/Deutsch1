@@ -52,4 +52,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewNameA1"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/inf.pret.pert2"
+        android:layout_width="142dp"
+        android:layout_height="108dp"
+        android:backgroundTint="@color/Lime"
+        android:onClick="go_to_glagaktivity"
+        android:text="Infinitiv, Präteritum, Partizip II"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toEndOf="@+id/buttonArtikle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameA1"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

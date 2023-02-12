@@ -28,4 +28,9 @@ public class A2 extends AppCompatActivity {
         Intent intent = new Intent(this, ArtikelActivity.class); //Переход на активнось Store
         startActivity(intent);
     }
+
+    public void go_to_glagaktivity(View view) {
+        Intent intent = new Intent(this, glagol.class); //Переход на активнось Store
+        startActivity(intent);
+    }
 }

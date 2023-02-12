@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class A1 extends AppCompatActivity {
+
+
     public class MyDialogFragment extends DialogFragment {}
 
     MainActivity m;
@@ -48,6 +50,11 @@ public class A1 extends AppCompatActivity {
 
     public void go_to_padezh(View view) {
         Intent intent = new Intent(this, Padezh.class); //Переход на активнось Store
+        startActivity(intent);
+    }
+
+    public void go_to_glagaktivity(View view) {
+        Intent intent = new Intent(this, glagol.class); //Переход на активнось Store
         startActivity(intent);
     }
 
