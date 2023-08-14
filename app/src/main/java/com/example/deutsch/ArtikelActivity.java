@@ -1,21 +1,16 @@
 package com.example.deutsch;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
-
-import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class ArtikelActivity extends AppCompatActivity {
     //1-der 2-die 3-das
@@ -311,146 +306,146 @@ public class ArtikelActivity extends AppCompatActivity {
             "2Zutaten",  "1Zweck,",  "1Zweifel,",  "2Zwiebel,"
     };
     String wordsb2[] =  new String[] {
-        "1Einzelkampfer,",  "2Einzelkampferin,",  "2Chefsekretarin,",  "1Ideen-",  "2Sozialform,",  "1Egoist,",
-        "2Charaktersache",  "2Charakterbildung",  "1Kommilitone,",  "1Teamgeist",  "1Individualist,",  "2Anstrengung,",
-        "3Hantieren",  "3Klischee,",  "2Informationsgesellschaft", "1Helfer,",  "2Not",  "1Verdienst",  "1Hochschulabsolvent,",
-        "1Arbeitsmarkt",  "2Wirtschaftskrise,",  "2Probezeit",  "2Werbeagentur,",  "2Welt",  "1Riss,",  "2Kommunikationswissenschaften",
-        "2Bundesagentur",  "3Anwachsen",  "1Akademiker,",  "2Krise,",  "2Exportnation,",  "2Hochleistungstechnologie",  "2Branche,",
-        "1Hochschulabschluss,",  "3Phanomen,",  "3Gesundheitswesen",  "1Geringqualifizierte,",  "1Effekt,",  "1Arbeitgeber,",
-        "1Anstieg",  "1Abschluss",  "2Fruhjahrsmudigkeit",  "1Kreislauf",  "2Beschwerde,",  "2Anpassungsphase,",  "1Wechsel,",
-        "3Hormon,",  "1Lichteinfluss",  "2Aktivierung",  "2Steigerung",  "2Umstellung",  "3Bedurfnis,", "1Sonnenschein",  "2Ubergangszeit",
-        "1Rhythmus",  "2Lichtverhaltnisse",  "3Gehirn",  "1Sauerstoff",  "3Immunsystem",  "1Fußmarsch,",  "1Schwung",  "3Organ,",
-        "1Sensor,",  "2Ausstrahlung",  "2Massage,",  "2Wechseldusche,",  "2Durchblutung",  "1Blutdruck",  "2Antriebslosigkeit",
-        "2Gereiztheit",  "2Niedergeschlagenheit",  "2Blutarmut",  "2Erkrankung",  "2Depression",  "3Erschopfungssyndrom",
-        "2Veranstaltung,",  "2Mitfahrgelegenheit,",  "3Profil,",  "2Prozedur,",  "2Spur,",  "1Bestandteil,",  "1Zeitfresser,",
-        "1Datenschutz",  "3Argument,",  "1Account,",  "1Selbstmord,",  "2Hausordnung",  "2Abreise",  "1Wertgegenstand,",
-        "2Feuerverhutungsvorschriften",  "2Nachtruhe",  "2Mitgliedschaft",  "2Aufbewahrung",  "2Haftung",  "3Kuvert,",
-        "3Schlie?fach,",  "2Lobby",  "2Nachbarschaft",  "3Gelande",  "2Etage,",  "2Anfrage,",  "2Anschrift",  "1Pool,",
-        "2Expedition,",  "3Couchsurfing",  "1Schlafplatz,",  "2Ubernachtungsmoglichkeit,",  "2Matratze,",  "1Wohnzimmerboden",
-        "1Beteiligte,",  "1Gastgeber,",  "1Backpacker,",  "1Horror",  "1Pauschaltourist,", "1Individualtourist,",  "1Tempel,",
-        "2Bequemlichkeit",  "3Hostel,",  "3Dutzend,",  "1Luxus",  "1Flieger",  "2Fernreise,",  "1Klimawandel",  "2Menschen",
-        "1Eingriff,",  "1Badeanzug,",  "1Siegel",  "2Entschleunigung",  "1Bauernhof,",  "1Verstand",  "1Hirnforscher,",
-        "3Marketing",  "2Illusion,",  "3Vorgehen",  "3Etikett,",  "2Sorte,",  "2Emotion,",  "1Werbefachmann,",  "3Logo,",
-        "2Produktklasse,",  "3Synonym,",  "2allgemeine",  "2Kernspintomographie",  "1Verfuhrer,",  "1Duft,",  "2Raritat,",
-        "1Luxusartikel,",  "2Ehrung",  "2Salbung",  "2Oberschicht",  "2Korperpflege",  "1Gebrauch",  "2Essenz,",
-        "2Destillation",  "2Parfumherstellung",  "1Aromastoff,",  "1Weihrauch",  "3Handelszentrum,",  "1Kaufmann,",
-        "1Kartausermonch,",  "2Gabe,",  "2Rezeptur,",  "2Manufaktur,",  "1Firmensitz",  "2Zusammensetzung",  "2Geheimhaltung",
-        "1Hauptbestandteil,",  "2Zitrusfrucht,",  "1Anteil,",  "1Alkohol",  "2Mischung",  "2Wirkung",  "1Modedesigner,",
-        "1Parfumeur,",  "1Misserfolg,",  "2Kreation,",  "3Militar",  "1Geruch,",  "2Substanz,", "2Truppe,",  "1Demonstrant,",
-        "2Flucht",  "3Empfinden",  "2Abwasserreinigungsanlage",  "1Veganismus",  "2Dokumentation,",  "2Toleranz",  "3Schlusselwort,",
-        "1Stammtisch,",  "1Veganer,",  "3Miteinander",  "1Vegetarier,",  "3Umfeld",  "2Wahrscheinlichkeit",  "3Ubergewicht",
-        "1Horizont",  "2Benutzungsordnung",  "3Inhaltsverzeichnis,",  "2Benutzungsregelung,",  "2Vorbestellung,",  "1Dienst,",
-        "2Benutzungsberechtigung",  "1Ausschluss",  "2Benutzung",  "1Leihgegenstand,",  "1Benutzer,",  "2Entrichtung",
-        "2Bereitstellung",  "2baulichen",  "2Ausstattung",  "1Gegenstand,",  "2Sorgfalt",  "1Betrieb",  "3Kunstwerk,",
-        "2Satzung,",  "2Gebuhrensatzung",  "1Versto?,",  "2Veranderung",  "2Beschmutzung",  "2Beschadigung,",  "2Nutzung",
-        "2Bindung,",  "2Bildung",  "3Bildungsniveau,",  "2Lebenszufriedenheit",  "2Vorstellung,",  "2Berufung",  "2Struktur,",
-        "2Leere",  "2Lebenshaltungskosten",  "1Reichtum",  "2Einbildung",  "2Erfullung",  "1Kranfahrer,",  "2Abwechslung",  "1Einsatz,",
-        "1Mitmensch,",  "2Umweltkatastrophe,",  "2Erwartung,",  "2Gewichtung",  "1Zusammenhalt",  "2Fursorge",  "2Verbundenheit",
-        "3Verlassenwerden",  "2Weltelite",  "1Muskelaufbau",  "1Amateur,",  "3Aufputschmittel,",  "1Laufer,",  "3Schmerzmittel,",
-        "1Freizeitsportler,",  "1Forscher,",  "1Ehrgeiz",  "1Sportmediziner,",  "1Medikamentenmissbrauch",  "1Wirkstoff,",
-        "2Leistungssteigerung",  "2Herz-Kreislauf-Probleme",  "1Schlaganfall,",  "2Niere,",  "2Magenblutung,",  "2Denkleistung",
-        "1Mediziner,",  "3Schonheitsideal,",  "2Weichen",  "1Einsatz",  "2Problematik",  "2Prokrastination",  "1Dachboden",
-        "1Wohnblock,",  "1Vorsatz,",  "3Vorhaben,", "2Umsetzung",  "2Schatzung,",  "2Konsequenz,",  "3Netzwerk,",  "1zeitliche",
-        "2Erledigung",  "2Prognose,",  "1Unsinn",  "1Marktanteil,",  "1Bruchteil,",  "3Lehrmaterial,",  "1Buchliebhaber,",
-        "3Antiquariat,",  "1Roman,",  "1Druck",  "2Ressource,",  "1Mobilfunk",  "2Laufzeit",  "2Kundigung",  "3Datenvolumen",
-        "2Rechnungsbegleichung",  "1Ubertragungsstandard",  "3Widerrufsrecht",  "1Tarifwechsel",  "2Sondergebuhr,",
-        "1Abschluss,",  "1Nutzer,",  "2Bezahlart,",  "2Einzugsermachtigung",  "2EC-Karte",  "1Ablauf",  "3Vertragsverhaltnis",
-        "2Gultigkeitsdauer",  "2Unsicherheit",  "2Selbstsicherheit",  "2Erbinformation,",  "2Zelle,",  "2Krebsform,",  "1Atemweg,",
-        "1Mord,",  "2Anhebung",  "2Tabakwaren",  "2Freigabe",  "1Apotheker,",  "2Apothekerin,",  "2Wasserpfeife,",  "2E-Zigarette,",
-        "3Rauchverbot,",  "3Privatauto,",  "2Uberlegung,",  "1Waldbrand,",  "3Zundholz,",  "1Zigarettenstummel,",  "1Funke,",
-        "1Unterwuchs",  "2Auswirkung,",  "1Aschenbecher,",  "2Raucherentwohnung",  "3Nikotin",  "1Glimmstangel,",  "2Tatsache,",
-        "2Entspannung",  "1Genuss",  "2Geselligkeit",  "1Geist,",  "1Einsatzbereich,",  "2Standardtherapie",  "2Angststorung,",
-        "2kognitiven",  "2App,",  "2Start-",  "2Flugangst",  "1Betroffene,",  "3Ritual,",  "3Gluckshormon,",  "3Wohlfuhl-Gefuhl,",
-        "1Aspekt,",  "1Muntermacher,",  "2Konzentration",  "2Gedachtnisleistung",  "2Gesundheitsgefahrdung",  "1Kopfhorer",
-        "1Horschaden,",  "1Konsument,",  "2Lautstarke",  "1Bluthochdruck",  "2Schlafstorung,",  "1Clown,",  "1Spa?macher,",
-        "2Atmung",  "2Behandlung,",  "2Visite,",  "3Seniorenheim,",  "2Einrichtung,",  "2Flexibilitat",  "2Sensibilitat",
-        "2Eigenschaft,",  "3Improvisationstalent",  "2Verkleidung,",  "1Charakter,",  "1Abstand,",  "3Elend",  "2Interaktion",
-        "2Belastung,",  "1Bankkaufmann,",  "1Pfarrer,",  "1Storenfried,",  "2Entlastung",  "3Einsatzgebiet,",  "3Krisengebiet,",
-        "2Verbesserung",  "2Naturkatastrophe,",  "2Armut", "1Kaffeebecher,",  "3Chaos",  "3Privatleben",  "2Privatsache",  "2Unordnung",
-        "1Karriereknick,",  "1Auftraggeber,",  "2Zumutung",  "2Vertretung",  "2Anmeldefrist,",  "2Befreiung",  "2Einstufungsberatung",
-        "2Kompetenz,",  "2Abmeldung,",  "1Verwaltungskostenanteil,",  "2Ruckerstattung",  "2Gutschrift",  "1Nachweis,",  "2Bescheinigung,",
-        "2Anwesenheitsliste,",  "2Pflege",  "1Kanarienvogel,",  "3Gen,",  "1Auslauf",  "2Leine",  "1Bach,",  "1Wanderweg,",
-        "1Wahnsinn",  "2Haltung",  "3Lebewesen,",  "2Schildkrote,",  "1Papagei,",  "1Tierhalter,",  "1Kater,",  "3Tierheim,",
-        "2Gesellschaft",  "1Besitzer,",  "2Einsamkeit",  "2Linderung",  "1Friseursalon,",  "3Versicherungsburo,",  "1Gassi-Dienst",
-        "2Verhaltensweise,",  "3Aquarium,",  "1Lugner,",  "3Augenblinzeln",  "2Faulheit",  "1Feind,",  "3Zusammenleben",
-        "1Scharfsinn",  "2Beobachtungsgabe",  "3Gedachtnis",  "1Puls",  "1Schwei?",  "1Schwindel",  "2Mimik",  "2Pupille,",
-        "2Millisekunde,",  "1Schwindler,",  "2Tauschung,",  "3Verhor,",  "2Nervositat",  "1Ausloser,",  "2Stirn",  "2Redeweise",
-        "1Schatz,",  "1Speicher,",  "1Sinn,",  "1Bummel",  "2Fachzeitschrift,",  "1Trodler,",  "1Altwarenhandler,",  "1Reiz,",
-        "2Ausbeute",  "3Marktgasschen,",  "3Objekt,",  "2Haushaltsauflosung,",  "1Besitz",  "2Antiquitat,",  "2Epoche,",
-        "1Neuling,",  "1Trodelmarkt,",  "3System,",  "1Fan,",  "2Wegwerfkultur",  "1Lifestyle",  "1Jager,",  "1Sammler,",
-        "1Flohmarktganger,",  "3Motto",  "1Wurm,",  "3Schnappchen,",  "2Atmosphare",  "3bunte",  "2Grundung",  "2Online-Branche",
-        "3Mobbing",  "1Klassenverband,",  "1Mobber,",  "1Außenstehende,",  "1Tatort,",  "3Cybermobbing",  "1Kommentar,",
-        "1Ubergriff,",  "2Anfeindung,",  "2Traurigkeit",  "1Frust",  "2Vertrauensperson,",  "1Vertrauenslehrer,",  "1Klassenlehrer,",
-        "2Schulgemeinschaft,", "3Unternehmen,",  "1Praktikant,",  "2Verschwiegenheit",  "2Vergutung",  "1Werktag,",  "2Vorgabe,",
-        "2Studienrichtung,",  "3Diplomarbeitsthema,",  "2Ablaufe",  "1Ansprechpartner,",  "2Beendigung",  "2Ausubung",
-        "2Arbeitsunfahigkeit",  "3Unwohlsein",  "1Fehltag,",  "3arztliche",  "2Angelegenheit,",  "1Rahmen",  "1Anlass,",
-        "3Ausscheiden",  "3(Studenten)Wohnheim,",  "2Wohngemeinschaft,",  "2WG,",  "1Telefonanschluss,",  "3Einzelkind,",
-        "3Badezimmer",  "2Waschmaschine,",  "1Mitbewohner,",  "2Einstellung,",  "1Gerauschpegel",  "1Zeitraum,",  "2Gemeinschaftsregel,",
-        "3Waschbecken,",  "2Streitigkeit,",  "2Abrechnung,",  "2Nachzahlung,",  "2Lernphase,",  "1Krach",  "1Mietpreis,",  "2Tasche",
-        "1Uni-Campus",  "2Chipkarte,",  "2Technologie",  "2Girokarte,",  "2Kreditkarte,",  "2Ecke",  "1Bezahlvorgang,",
-        "2Sicherheitsbedenken",  "3Terminal,",  "1Kriminelle,",  "2Ubertragung,",  "2Zutrittskarte,",  "3Funksignal,",
-        "2Funkwelle,",  "2Reichweite", "3Magnetfeld,",  "3Ablaufdatum",  "2Rolltreppe,",  "1Zahlencode",  "2Ruckseite",  "1Vorgang,",
-        "1Optimismus",  "3Glas,",  "2Definition,",  "1Gemutszustand",  "1Pessimist,",  "2Befurchtung,",  "1Optimist,",  "3Schicksal,",
-        "2Produktivitat",  "2Vergabe",  "2Fahigkeit,",  "2Fuhrungskraft,",  "2Fuhrungsetage,",  "2Strategie,",  "1Glaube",  "2Deponie,",
-        "2Herstellung", "2Neuware,",  "1Schadstoff,",  "3Neugeborene,",  "2Vermarktung",  "2Markenkleidung",  "2Alltagskleidung",
-        "3Kleidungsstuck,",  "2Lederhose,",  "2Masse,",  "2Einmaligkeit",  "1Suchbegriff,",  "3Umtauschrecht",  "2Lieferzeit,",
-        "2Zahlungsmethode,",  "2Ermaßigung,",  "1Zoll,",  "2Altersgrenze",  "1Transportschaden,",  "2Dienstleistung,",  "1Elternteil,",
-        "1Erziehungsberechtigte,",  "2Versendung",  "2Liefer",  "1Preisnachlass,",  "3Zustelldatum",  "2Zustellung",  "1Eingang",
-        "2Krankenpflegerin,",  "3Arbeiterviertel,",  "2Hand",  "2Anonymitat",  "1freundschaftliche",  "3Mehrfamilienhaus,",
-        "3Reihenhaus,",  "2Handschrift,",  "2Digitalisierung",  "1Umgang",  "2Schreibschrift",  "2Druckschrift",  "1Fokus",
-        "2Grundschrift",  "2Erkenntnis,",  "2Neurowissenschaft",  "1Unterrichtsstoff",  "2Vorlesung,",  "3Skript,",  "2Individualitat",
-        "2Privatschule,",  "2Schullandschaft",  "2Bildungseinrichtung,", "2Neugrundung,",  "1Schulpflichtige,",  "3Schulklima",  "2Lucke,",
-        "1Schwerpunkt,",  "3Betreuungsangebot,",  "1Wandel",  "2Anforderung,",  "2Hausaufgabenbetreuung",  "2Ausrichtung,",
-        "1Hochbegabte,",  "2Initiative,",  "1Erziehungsexperte,",  "3Stipendienprogramm,",  "3Element,",  "2Wandlung",  "3Image",
-        "2Neugier",  "1Verkehr",  "1Unfallort",  "2Einsatzkrafte",  "1Wissensdurst",  "1Roboter,",  "1Nachbarplanet,",  "1Drang",
-        "2Aufmerksamkeit",  "2Einmischung",  "3Argernis,",  "2Nebenwirkung,",  "2Skala",  "3lebenslange",  "2Info,",
-        "1Brandschutzbeauftragte,",  "1Alarmplan,",  "2Risiko-Analyse,",  "2Stellung",  "1Brand,",  "2Vollmacht,",
-        "2Fachkraft,",  "2Leitung",  "1Brandschutz",  "2Vorbildung",  "1Produktionsablauf,",  "2Praxis",  "2Macht",
-        "2Weisungsbefugnis",  "3Alarm",  "2Wiederherstellung",  "1Standard,",  "3Mitentscheidungsrecht",  "2Maßnahme,",
-        "3Vorschlagsrecht",  "2Investition,",  "1Lehrberuf,",  "2Schulpflicht",  "1Elektriker,",  "2Sicherheitsanlagentechnik",
-        "1Lehrgang,",  "2Personlichkeit,",  "1Wohlstand",  "2Perspektive,",  "3Selbstvertrauen",  "1Aufstieg",  "2Zufriedenheit",
-        "2Gestik", "2Korperhaltung",  "2Aussage,",  "3Vorstellungsgesprach,",  "1Vorgesetzte,",  "1Sprung,",  "2Leiter",
-        "2Ausbreitung",  "1Fernkurs,",  "1Kursteilnehmer,",  "3Headset,",  "2Einheit,",  "2Lernplattform,",  "2Gehaltserhohung,",
-        "2Chefsache,",  "2Ansicht,",  "2Arbeitskraft,",  "2Baufirma,",  "1Steuer",  "2Art",  "3Paradies",  "2Mullkippe,",
-        "2Sudseeinsel,",  "1Plastikmull",  "1Pazifik",  "3Plastikteil,",  "2Mulldichte",  "2Zahnburste,",  "1Dominostein,",
-        "3Ausmaß",  "2Zahlung",  "2Tonne,",  "2Oberflache,",  "1Strudel",  "2Schicht,",  "3Stuckchen,",  "3Plankton",  "2Koralleninsel,",
-        "3Weltnaturerbe,",  "1Quadratkilometer,",  "2Meeresstromung,",  "2Wetterbedingungen",  "1Verbleib",  "2Haltbarkeit",  "3Okosystem,",
-        "3Hilfswerk,",  "3Kriegswaisenkind,",  "2Uhr",  "1Grundsatz,",  "2Geborgenheit",  "1Unterstutzer,",  "1Drogenmissbrauch",
-        "1Padagoge,",  "1Psychologe,",  "1Erzieher,",  "2Wohngruppe,",  "2medizinische",  "1Pluspunkt,",  "2Globalisierung",  "1Absolvent,",
-        "2Ebene,",  "2Landessprache,", "1Sprachkurs,",  "1Praxis",  "1Studienort,",  "1Facebook-Post,",  "1Hohepunkt,",  "3Mittelmaß",
-        "1Tiefpunkt,",  "2Doppelbelastung",  "3Gastland,",  "2Freiwilligenarbeit",  "3Mindestalter",  "3Einsatzfeld,",  "2Vorkenntnisse",
-        "2Soft",  "2Erstattung",  "2Unkosten",  "2Anerkennung",  "3Ma?",  "2Teamfahigkeit",  "2Motivation",  "2Verlasslichkeit",
-        "3Einfuhlungsvermogen",  "2Sozialkompetenz,",  "3ehrenamtliche",  "2Institution,",  "2Organisationsstruktur,",  "3Alterszentrum,",
-        "2Jugendhilfe",  "2Begegnungsstatte,",  "2Stadtverwaltung",  "2Wertschatzung",  "2Publikation",  "2Erwahnung",  "3Dossier,",
-        "2Betriebswirtschaftslehre",  "3Missverstandnis,",  "1Kulturschock,",  "1Umgang",  "1Dozent,",  "2Respektperson,",  "2Sitten",
-        "3Nachbarland,",  "2Ablehnung",  "3ist",  "1Unmut",  "1Unwille(n)",  "2Falschheit",  "2Begru?ung",  "2Wange,",  "1Handedruck",
-        "1Dienstleistungssektor",  "2Arbeitskultur",  "2Harmonie",  "2Logik",  "3Labor,",  "1Thriller,",  "2Spannung",  "2Begeisterung",
-        "1Mitspieler,",  "2Ahnlichkeit,",  "2Vorlage,",  "3Szenario,",  "3Fluchtspiel,",  "1Schwierigkeitsgrad,",  "2Außenwelt",
-        "2Altersbeschrankung,",  "3Brettspiel,",  "3Prinzip,", "2Qual,",  "1Griff",  "2Leber",  "1Ausweg",  "2Schmerzspirale",
-        "2Warn",  "3Bucken",  "2Tortur,",  "2Schlaflosigkeit",  "2Appetitlosigkeit",  "2Erschopfung",  "2Isolation",  "1Therapeut,",
-        "3Behandlungskonzept,",  "3Entwicklungsland,",  "3Nervensystem,",  "1Phantomschmerz,",  "2Amputation,",  "3Korperglied,",
-        "3Verfahren",  "2Ambulanz,",  "2Verhaltenstherapie",  "3Entspannungstraining",  "3Stichwort",  "2Physiotherapie",
-        "2Schmerzlinderung",  "1Teufelskreis",  "2Schmerzerfahrung",  "2Anspannung",  "2Verkrampfung",  "2Muskelentspannung",
-        "2Meditation",  "3Biofeedback",  "2Hypnose",  "3Diktiergerat,",  "2Aufnahme,",  "3Erinnerungsvermogen",  "2Ruckblende,",
-        "3Geschehnis,",  "3Aroma,",  "1Zimt",  "2Nelke,",  "2Bildung",  "2Identitat,",  "2Episode,",  "1Zahnarzttermin,",  "1Vorfall,",
-        "2Erinnerungslucke,",  "2Demenz",  "2Prufungsordnung",  "3Rettungsschwimmen",  "1Ablauf",  "2Wiederholungsprufung,",
-        "2Zertifizierung",  "2Regelung,",  "2Behinderung,",  "3Abzeichen,",  "2Einzelleistung,",  "1Ausbilder,",  "2Leistungen",
-        "2Urkunde,",  "2ausstellende",  "2Durchfuhrung",  "3Gewasser,",  "2Sicherungsma?nahme,",  "2Sicherheitsgrunde",
-        "3Streckentauchen",  "1Kopfsprung,",  "2Vorbedingung,",  "2Schulung,",  "1Gesundheitszustand", "2Zulassung",  "2arztliche",
-        "2Bestimmung,",  "2Ausfuhrungsbestimmungen",  "3Bundel,",  "2Lieblingsspeise,",  "2Besinnung",  "2Vertrauenswelt,",  "2Wiege",
-        "3Urvertrauen",  "2Gewissheit",  "1Au?enseiter,",  "3Lebensbedurfnis,",  "2Kindheit",  "1Nomade,",  "3Heimatgefuhl,",
-        "2Wurzel,",  "3Nachhausekommen",  "3Mordsvergnugen",  "1Kriminalroman,",  "2Frage",  "1Kritiker,",  "3Kreuzwortratsel,",
-        "2Unterhaltungsliteratur",  "1Detektiv,",  "2Kurzgeschichte,",  "1Doppelmord,",  "2Literaturgeschichte",  "3Verbrechen,",
-        "1Ausgangspunkt,",  "1Fall,",  "2Handlung",  "1Hintergrund,",  "2Aufklarung",  "1Privatdetektiv,",  "2Suche",  "1Tater,",
-        "1Ermittler,",  "1Verleger,",  "1Star,",  "2Sammlung,",  "2Unterart,",  "3Grundkonzept,",  "2Serienfigur,",  "3Thermometer,",
-        "3Wohlbefinden",  "2Luftfeuchtigkeit",  "3subjektive",  "2Windstille",  "1Wetterdienst",  "2Wetterprognose,",  "1Durstloscher,",
-        "3Koffein",  "1Krautertee,",  "1Fruchtetee,",  "2Nahrungsaufnahme",  "1prallen",  "2UV-Strahlen",  "1Lichtschutzfaktor,",
-        "2Hitzewelle,",  "2Planungssunde,",  "1Stadtebau",  "2Abkuhlung",  "2Parkanlage,", "1Wortschatz",  "1Schreibstil",
-        "2Erzahltechnik,",  "1Schreibfluss",  "2Erzahlfigur,",  "3Leid",  "2Lekture",  "1Gesprachspartner,",
-        "3Bundesausbildungsforderungsgesetz",  "1Auszubildende,",  "2Fachschule,",  "3Abendgymnasium,",  "3Kolleg,",
-        "2Akademie,",  "1Absatz,",  "1Zuschuss,",  "2Ausbildungsstatte,",  "1Forderungsbetrag,",  "3Darlehen",  "1Gesamtbetrag",
-        "2Berufsfachschule,",  "2Fachoberschule,",  "2Abendhauptschule,",  "2Berufsaufbauschule,",  "2Abendrealschule,",
-        "2Regelstudienzeit",  "2Forderung",  "2Forderungshochstdauer"
+            "1Einzelkampfer,",  "2Einzelkampferin,",  "2Chefsekretarin,",  "1Ideen-",  "2Sozialform,",  "1Egoist,",
+            "2Charaktersache",  "2Charakterbildung",  "1Kommilitone,",  "1Teamgeist",  "1Individualist,",  "2Anstrengung,",
+            "3Hantieren",  "3Klischee,",  "2Informationsgesellschaft", "1Helfer,",  "2Not",  "1Verdienst",  "1Hochschulabsolvent,",
+            "1Arbeitsmarkt",  "2Wirtschaftskrise,",  "2Probezeit",  "2Werbeagentur,",  "2Welt",  "1Riss,",  "2Kommunikationswissenschaften",
+            "2Bundesagentur",  "3Anwachsen",  "1Akademiker,",  "2Krise,",  "2Exportnation,",  "2Hochleistungstechnologie",  "2Branche,",
+            "1Hochschulabschluss,",  "3Phanomen,",  "3Gesundheitswesen",  "1Geringqualifizierte,",  "1Effekt,",  "1Arbeitgeber,",
+            "1Anstieg",  "1Abschluss",  "2Fruhjahrsmudigkeit",  "1Kreislauf",  "2Beschwerde,",  "2Anpassungsphase,",  "1Wechsel,",
+            "3Hormon,",  "1Lichteinfluss",  "2Aktivierung",  "2Steigerung",  "2Umstellung",  "3Bedurfnis,", "1Sonnenschein",  "2Ubergangszeit",
+            "1Rhythmus",  "2Lichtverhaltnisse",  "3Gehirn",  "1Sauerstoff",  "3Immunsystem",  "1Fußmarsch,",  "1Schwung",  "3Organ,",
+            "1Sensor,",  "2Ausstrahlung",  "2Massage,",  "2Wechseldusche,",  "2Durchblutung",  "1Blutdruck",  "2Antriebslosigkeit",
+            "2Gereiztheit",  "2Niedergeschlagenheit",  "2Blutarmut",  "2Erkrankung",  "2Depression",  "3Erschopfungssyndrom",
+            "2Veranstaltung,",  "2Mitfahrgelegenheit,",  "3Profil,",  "2Prozedur,",  "2Spur,",  "1Bestandteil,",  "1Zeitfresser,",
+            "1Datenschutz",  "3Argument,",  "1Account,",  "1Selbstmord,",  "2Hausordnung",  "2Abreise",  "1Wertgegenstand,",
+            "2Feuerverhutungsvorschriften",  "2Nachtruhe",  "2Mitgliedschaft",  "2Aufbewahrung",  "2Haftung",  "3Kuvert,",
+            "3Schlie?fach,",  "2Lobby",  "2Nachbarschaft",  "3Gelande",  "2Etage,",  "2Anfrage,",  "2Anschrift",  "1Pool,",
+            "2Expedition,",  "3Couchsurfing",  "1Schlafplatz,",  "2Ubernachtungsmoglichkeit,",  "2Matratze,",  "1Wohnzimmerboden",
+            "1Beteiligte,",  "1Gastgeber,",  "1Backpacker,",  "1Horror",  "1Pauschaltourist,", "1Individualtourist,",  "1Tempel,",
+            "2Bequemlichkeit",  "3Hostel,",  "3Dutzend,",  "1Luxus",  "1Flieger",  "2Fernreise,",  "1Klimawandel",  "2Menschen",
+            "1Eingriff,",  "1Badeanzug,",  "1Siegel",  "2Entschleunigung",  "1Bauernhof,",  "1Verstand",  "1Hirnforscher,",
+            "3Marketing",  "2Illusion,",  "3Vorgehen",  "3Etikett,",  "2Sorte,",  "2Emotion,",  "1Werbefachmann,",  "3Logo,",
+            "2Produktklasse,",  "3Synonym,",  "2allgemeine",  "2Kernspintomographie",  "1Verfuhrer,",  "1Duft,",  "2Raritat,",
+            "1Luxusartikel,",  "2Ehrung",  "2Salbung",  "2Oberschicht",  "2Korperpflege",  "1Gebrauch",  "2Essenz,",
+            "2Destillation",  "2Parfumherstellung",  "1Aromastoff,",  "1Weihrauch",  "3Handelszentrum,",  "1Kaufmann,",
+            "1Kartausermonch,",  "2Gabe,",  "2Rezeptur,",  "2Manufaktur,",  "1Firmensitz",  "2Zusammensetzung",  "2Geheimhaltung",
+            "1Hauptbestandteil,",  "2Zitrusfrucht,",  "1Anteil,",  "1Alkohol",  "2Mischung",  "2Wirkung",  "1Modedesigner,",
+            "1Parfumeur,",  "1Misserfolg,",  "2Kreation,",  "3Militar",  "1Geruch,",  "2Substanz,", "2Truppe,",  "1Demonstrant,",
+            "2Flucht",  "3Empfinden",  "2Abwasserreinigungsanlage",  "1Veganismus",  "2Dokumentation,",  "2Toleranz",  "3Schlusselwort,",
+            "1Stammtisch,",  "1Veganer,",  "3Miteinander",  "1Vegetarier,",  "3Umfeld",  "2Wahrscheinlichkeit",  "3Ubergewicht",
+            "1Horizont",  "2Benutzungsordnung",  "3Inhaltsverzeichnis,",  "2Benutzungsregelung,",  "2Vorbestellung,",  "1Dienst,",
+            "2Benutzungsberechtigung",  "1Ausschluss",  "2Benutzung",  "1Leihgegenstand,",  "1Benutzer,",  "2Entrichtung",
+            "2Bereitstellung",  "2baulichen",  "2Ausstattung",  "1Gegenstand,",  "2Sorgfalt",  "1Betrieb",  "3Kunstwerk,",
+            "2Satzung,",  "2Gebuhrensatzung",  "1Versto?,",  "2Veranderung",  "2Beschmutzung",  "2Beschadigung,",  "2Nutzung",
+            "2Bindung,",  "2Bildung",  "3Bildungsniveau,",  "2Lebenszufriedenheit",  "2Vorstellung,",  "2Berufung",  "2Struktur,",
+            "2Leere",  "2Lebenshaltungskosten",  "1Reichtum",  "2Einbildung",  "2Erfullung",  "1Kranfahrer,",  "2Abwechslung",  "1Einsatz,",
+            "1Mitmensch,",  "2Umweltkatastrophe,",  "2Erwartung,",  "2Gewichtung",  "1Zusammenhalt",  "2Fursorge",  "2Verbundenheit",
+            "3Verlassenwerden",  "2Weltelite",  "1Muskelaufbau",  "1Amateur,",  "3Aufputschmittel,",  "1Laufer,",  "3Schmerzmittel,",
+            "1Freizeitsportler,",  "1Forscher,",  "1Ehrgeiz",  "1Sportmediziner,",  "1Medikamentenmissbrauch",  "1Wirkstoff,",
+            "2Leistungssteigerung",  "2Herz-Kreislauf-Probleme",  "1Schlaganfall,",  "2Niere,",  "2Magenblutung,",  "2Denkleistung",
+            "1Mediziner,",  "3Schonheitsideal,",  "2Weichen",  "1Einsatz",  "2Problematik",  "2Prokrastination",  "1Dachboden",
+            "1Wohnblock,",  "1Vorsatz,",  "3Vorhaben,", "2Umsetzung",  "2Schatzung,",  "2Konsequenz,",  "3Netzwerk,",  "1zeitliche",
+            "2Erledigung",  "2Prognose,",  "1Unsinn",  "1Marktanteil,",  "1Bruchteil,",  "3Lehrmaterial,",  "1Buchliebhaber,",
+            "3Antiquariat,",  "1Roman,",  "1Druck",  "2Ressource,",  "1Mobilfunk",  "2Laufzeit",  "2Kundigung",  "3Datenvolumen",
+            "2Rechnungsbegleichung",  "1Ubertragungsstandard",  "3Widerrufsrecht",  "1Tarifwechsel",  "2Sondergebuhr,",
+            "1Abschluss,",  "1Nutzer,",  "2Bezahlart,",  "2Einzugsermachtigung",  "2EC-Karte",  "1Ablauf",  "3Vertragsverhaltnis",
+            "2Gultigkeitsdauer",  "2Unsicherheit",  "2Selbstsicherheit",  "2Erbinformation,",  "2Zelle,",  "2Krebsform,",  "1Atemweg,",
+            "1Mord,",  "2Anhebung",  "2Tabakwaren",  "2Freigabe",  "1Apotheker,",  "2Apothekerin,",  "2Wasserpfeife,",  "2E-Zigarette,",
+            "3Rauchverbot,",  "3Privatauto,",  "2Uberlegung,",  "1Waldbrand,",  "3Zundholz,",  "1Zigarettenstummel,",  "1Funke,",
+            "1Unterwuchs",  "2Auswirkung,",  "1Aschenbecher,",  "2Raucherentwohnung",  "3Nikotin",  "1Glimmstangel,",  "2Tatsache,",
+            "2Entspannung",  "1Genuss",  "2Geselligkeit",  "1Geist,",  "1Einsatzbereich,",  "2Standardtherapie",  "2Angststorung,",
+            "2kognitiven",  "2App,",  "2Start-",  "2Flugangst",  "1Betroffene,",  "3Ritual,",  "3Gluckshormon,",  "3Wohlfuhl-Gefuhl,",
+            "1Aspekt,",  "1Muntermacher,",  "2Konzentration",  "2Gedachtnisleistung",  "2Gesundheitsgefahrdung",  "1Kopfhorer",
+            "1Horschaden,",  "1Konsument,",  "2Lautstarke",  "1Bluthochdruck",  "2Schlafstorung,",  "1Clown,",  "1Spa?macher,",
+            "2Atmung",  "2Behandlung,",  "2Visite,",  "3Seniorenheim,",  "2Einrichtung,",  "2Flexibilitat",  "2Sensibilitat",
+            "2Eigenschaft,",  "3Improvisationstalent",  "2Verkleidung,",  "1Charakter,",  "1Abstand,",  "3Elend",  "2Interaktion",
+            "2Belastung,",  "1Bankkaufmann,",  "1Pfarrer,",  "1Storenfried,",  "2Entlastung",  "3Einsatzgebiet,",  "3Krisengebiet,",
+            "2Verbesserung",  "2Naturkatastrophe,",  "2Armut", "1Kaffeebecher,",  "3Chaos",  "3Privatleben",  "2Privatsache",  "2Unordnung",
+            "1Karriereknick,",  "1Auftraggeber,",  "2Zumutung",  "2Vertretung",  "2Anmeldefrist,",  "2Befreiung",  "2Einstufungsberatung",
+            "2Kompetenz,",  "2Abmeldung,",  "1Verwaltungskostenanteil,",  "2Ruckerstattung",  "2Gutschrift",  "1Nachweis,",  "2Bescheinigung,",
+            "2Anwesenheitsliste,",  "2Pflege",  "1Kanarienvogel,",  "3Gen,",  "1Auslauf",  "2Leine",  "1Bach,",  "1Wanderweg,",
+            "1Wahnsinn",  "2Haltung",  "3Lebewesen,",  "2Schildkrote,",  "1Papagei,",  "1Tierhalter,",  "1Kater,",  "3Tierheim,",
+            "2Gesellschaft",  "1Besitzer,",  "2Einsamkeit",  "2Linderung",  "1Friseursalon,",  "3Versicherungsburo,",  "1Gassi-Dienst",
+            "2Verhaltensweise,",  "3Aquarium,",  "1Lugner,",  "3Augenblinzeln",  "2Faulheit",  "1Feind,",  "3Zusammenleben",
+            "1Scharfsinn",  "2Beobachtungsgabe",  "3Gedachtnis",  "1Puls",  "1Schwei?",  "1Schwindel",  "2Mimik",  "2Pupille,",
+            "2Millisekunde,",  "1Schwindler,",  "2Tauschung,",  "3Verhor,",  "2Nervositat",  "1Ausloser,",  "2Stirn",  "2Redeweise",
+            "1Schatz,",  "1Speicher,",  "1Sinn,",  "1Bummel",  "2Fachzeitschrift,",  "1Trodler,",  "1Altwarenhandler,",  "1Reiz,",
+            "2Ausbeute",  "3Marktgasschen,",  "3Objekt,",  "2Haushaltsauflosung,",  "1Besitz",  "2Antiquitat,",  "2Epoche,",
+            "1Neuling,",  "1Trodelmarkt,",  "3System,",  "1Fan,",  "2Wegwerfkultur",  "1Lifestyle",  "1Jager,",  "1Sammler,",
+            "1Flohmarktganger,",  "3Motto",  "1Wurm,",  "3Schnappchen,",  "2Atmosphare",  "3bunte",  "2Grundung",  "2Online-Branche",
+            "3Mobbing",  "1Klassenverband,",  "1Mobber,",  "1Außenstehende,",  "1Tatort,",  "3Cybermobbing",  "1Kommentar,",
+            "1Ubergriff,",  "2Anfeindung,",  "2Traurigkeit",  "1Frust",  "2Vertrauensperson,",  "1Vertrauenslehrer,",  "1Klassenlehrer,",
+            "2Schulgemeinschaft,", "3Unternehmen,",  "1Praktikant,",  "2Verschwiegenheit",  "2Vergutung",  "1Werktag,",  "2Vorgabe,",
+            "2Studienrichtung,",  "3Diplomarbeitsthema,",  "2Ablaufe",  "1Ansprechpartner,",  "2Beendigung",  "2Ausubung",
+            "2Arbeitsunfahigkeit",  "3Unwohlsein",  "1Fehltag,",  "3arztliche",  "2Angelegenheit,",  "1Rahmen",  "1Anlass,",
+            "3Ausscheiden",  "3(Studenten)Wohnheim,",  "2Wohngemeinschaft,",  "2WG,",  "1Telefonanschluss,",  "3Einzelkind,",
+            "3Badezimmer",  "2Waschmaschine,",  "1Mitbewohner,",  "2Einstellung,",  "1Gerauschpegel",  "1Zeitraum,",  "2Gemeinschaftsregel,",
+            "3Waschbecken,",  "2Streitigkeit,",  "2Abrechnung,",  "2Nachzahlung,",  "2Lernphase,",  "1Krach",  "1Mietpreis,",  "2Tasche",
+            "1Uni-Campus",  "2Chipkarte,",  "2Technologie",  "2Girokarte,",  "2Kreditkarte,",  "2Ecke",  "1Bezahlvorgang,",
+            "2Sicherheitsbedenken",  "3Terminal,",  "1Kriminelle,",  "2Ubertragung,",  "2Zutrittskarte,",  "3Funksignal,",
+            "2Funkwelle,",  "2Reichweite", "3Magnetfeld,",  "3Ablaufdatum",  "2Rolltreppe,",  "1Zahlencode",  "2Ruckseite",  "1Vorgang,",
+            "1Optimismus",  "3Glas,",  "2Definition,",  "1Gemutszustand",  "1Pessimist,",  "2Befurchtung,",  "1Optimist,",  "3Schicksal,",
+            "2Produktivitat",  "2Vergabe",  "2Fahigkeit,",  "2Fuhrungskraft,",  "2Fuhrungsetage,",  "2Strategie,",  "1Glaube",  "2Deponie,",
+            "2Herstellung", "2Neuware,",  "1Schadstoff,",  "3Neugeborene,",  "2Vermarktung",  "2Markenkleidung",  "2Alltagskleidung",
+            "3Kleidungsstuck,",  "2Lederhose,",  "2Masse,",  "2Einmaligkeit",  "1Suchbegriff,",  "3Umtauschrecht",  "2Lieferzeit,",
+            "2Zahlungsmethode,",  "2Ermaßigung,",  "1Zoll,",  "2Altersgrenze",  "1Transportschaden,",  "2Dienstleistung,",  "1Elternteil,",
+            "1Erziehungsberechtigte,",  "2Versendung",  "2Liefer",  "1Preisnachlass,",  "3Zustelldatum",  "2Zustellung",  "1Eingang",
+            "2Krankenpflegerin,",  "3Arbeiterviertel,",  "2Hand",  "2Anonymitat",  "1freundschaftliche",  "3Mehrfamilienhaus,",
+            "3Reihenhaus,",  "2Handschrift,",  "2Digitalisierung",  "1Umgang",  "2Schreibschrift",  "2Druckschrift",  "1Fokus",
+            "2Grundschrift",  "2Erkenntnis,",  "2Neurowissenschaft",  "1Unterrichtsstoff",  "2Vorlesung,",  "3Skript,",  "2Individualitat",
+            "2Privatschule,",  "2Schullandschaft",  "2Bildungseinrichtung,", "2Neugrundung,",  "1Schulpflichtige,",  "3Schulklima",  "2Lucke,",
+            "1Schwerpunkt,",  "3Betreuungsangebot,",  "1Wandel",  "2Anforderung,",  "2Hausaufgabenbetreuung",  "2Ausrichtung,",
+            "1Hochbegabte,",  "2Initiative,",  "1Erziehungsexperte,",  "3Stipendienprogramm,",  "3Element,",  "2Wandlung",  "3Image",
+            "2Neugier",  "1Verkehr",  "1Unfallort",  "2Einsatzkrafte",  "1Wissensdurst",  "1Roboter,",  "1Nachbarplanet,",  "1Drang",
+            "2Aufmerksamkeit",  "2Einmischung",  "3Argernis,",  "2Nebenwirkung,",  "2Skala",  "3lebenslange",  "2Info,",
+            "1Brandschutzbeauftragte,",  "1Alarmplan,",  "2Risiko-Analyse,",  "2Stellung",  "1Brand,",  "2Vollmacht,",
+            "2Fachkraft,",  "2Leitung",  "1Brandschutz",  "2Vorbildung",  "1Produktionsablauf,",  "2Praxis",  "2Macht",
+            "2Weisungsbefugnis",  "3Alarm",  "2Wiederherstellung",  "1Standard,",  "3Mitentscheidungsrecht",  "2Maßnahme,",
+            "3Vorschlagsrecht",  "2Investition,",  "1Lehrberuf,",  "2Schulpflicht",  "1Elektriker,",  "2Sicherheitsanlagentechnik",
+            "1Lehrgang,",  "2Personlichkeit,",  "1Wohlstand",  "2Perspektive,",  "3Selbstvertrauen",  "1Aufstieg",  "2Zufriedenheit",
+            "2Gestik", "2Korperhaltung",  "2Aussage,",  "3Vorstellungsgesprach,",  "1Vorgesetzte,",  "1Sprung,",  "2Leiter",
+            "2Ausbreitung",  "1Fernkurs,",  "1Kursteilnehmer,",  "3Headset,",  "2Einheit,",  "2Lernplattform,",  "2Gehaltserhohung,",
+            "2Chefsache,",  "2Ansicht,",  "2Arbeitskraft,",  "2Baufirma,",  "1Steuer",  "2Art",  "3Paradies",  "2Mullkippe,",
+            "2Sudseeinsel,",  "1Plastikmull",  "1Pazifik",  "3Plastikteil,",  "2Mulldichte",  "2Zahnburste,",  "1Dominostein,",
+            "3Ausmaß",  "2Zahlung",  "2Tonne,",  "2Oberflache,",  "1Strudel",  "2Schicht,",  "3Stuckchen,",  "3Plankton",  "2Koralleninsel,",
+            "3Weltnaturerbe,",  "1Quadratkilometer,",  "2Meeresstromung,",  "2Wetterbedingungen",  "1Verbleib",  "2Haltbarkeit",  "3Okosystem,",
+            "3Hilfswerk,",  "3Kriegswaisenkind,",  "2Uhr",  "1Grundsatz,",  "2Geborgenheit",  "1Unterstutzer,",  "1Drogenmissbrauch",
+            "1Padagoge,",  "1Psychologe,",  "1Erzieher,",  "2Wohngruppe,",  "2medizinische",  "1Pluspunkt,",  "2Globalisierung",  "1Absolvent,",
+            "2Ebene,",  "2Landessprache,", "1Sprachkurs,",  "1Praxis",  "1Studienort,",  "1Facebook-Post,",  "1Hohepunkt,",  "3Mittelmaß",
+            "1Tiefpunkt,",  "2Doppelbelastung",  "3Gastland,",  "2Freiwilligenarbeit",  "3Mindestalter",  "3Einsatzfeld,",  "2Vorkenntnisse",
+            "2Soft",  "2Erstattung",  "2Unkosten",  "2Anerkennung",  "3Ma?",  "2Teamfahigkeit",  "2Motivation",  "2Verlasslichkeit",
+            "3Einfuhlungsvermogen",  "2Sozialkompetenz,",  "3ehrenamtliche",  "2Institution,",  "2Organisationsstruktur,",  "3Alterszentrum,",
+            "2Jugendhilfe",  "2Begegnungsstatte,",  "2Stadtverwaltung",  "2Wertschatzung",  "2Publikation",  "2Erwahnung",  "3Dossier,",
+            "2Betriebswirtschaftslehre",  "3Missverstandnis,",  "1Kulturschock,",  "1Umgang",  "1Dozent,",  "2Respektperson,",  "2Sitten",
+            "3Nachbarland,",  "2Ablehnung",  "3ist",  "1Unmut",  "1Unwille(n)",  "2Falschheit",  "2Begru?ung",  "2Wange,",  "1Handedruck",
+            "1Dienstleistungssektor",  "2Arbeitskultur",  "2Harmonie",  "2Logik",  "3Labor,",  "1Thriller,",  "2Spannung",  "2Begeisterung",
+            "1Mitspieler,",  "2Ahnlichkeit,",  "2Vorlage,",  "3Szenario,",  "3Fluchtspiel,",  "1Schwierigkeitsgrad,",  "2Außenwelt",
+            "2Altersbeschrankung,",  "3Brettspiel,",  "3Prinzip,", "2Qual,",  "1Griff",  "2Leber",  "1Ausweg",  "2Schmerzspirale",
+            "2Warn",  "3Bucken",  "2Tortur,",  "2Schlaflosigkeit",  "2Appetitlosigkeit",  "2Erschopfung",  "2Isolation",  "1Therapeut,",
+            "3Behandlungskonzept,",  "3Entwicklungsland,",  "3Nervensystem,",  "1Phantomschmerz,",  "2Amputation,",  "3Korperglied,",
+            "3Verfahren",  "2Ambulanz,",  "2Verhaltenstherapie",  "3Entspannungstraining",  "3Stichwort",  "2Physiotherapie",
+            "2Schmerzlinderung",  "1Teufelskreis",  "2Schmerzerfahrung",  "2Anspannung",  "2Verkrampfung",  "2Muskelentspannung",
+            "2Meditation",  "3Biofeedback",  "2Hypnose",  "3Diktiergerat,",  "2Aufnahme,",  "3Erinnerungsvermogen",  "2Ruckblende,",
+            "3Geschehnis,",  "3Aroma,",  "1Zimt",  "2Nelke,",  "2Bildung",  "2Identitat,",  "2Episode,",  "1Zahnarzttermin,",  "1Vorfall,",
+            "2Erinnerungslucke,",  "2Demenz",  "2Prufungsordnung",  "3Rettungsschwimmen",  "1Ablauf",  "2Wiederholungsprufung,",
+            "2Zertifizierung",  "2Regelung,",  "2Behinderung,",  "3Abzeichen,",  "2Einzelleistung,",  "1Ausbilder,",  "2Leistungen",
+            "2Urkunde,",  "2ausstellende",  "2Durchfuhrung",  "3Gewasser,",  "2Sicherungsma?nahme,",  "2Sicherheitsgrunde",
+            "3Streckentauchen",  "1Kopfsprung,",  "2Vorbedingung,",  "2Schulung,",  "1Gesundheitszustand", "2Zulassung",  "2arztliche",
+            "2Bestimmung,",  "2Ausfuhrungsbestimmungen",  "3Bundel,",  "2Lieblingsspeise,",  "2Besinnung",  "2Vertrauenswelt,",  "2Wiege",
+            "3Urvertrauen",  "2Gewissheit",  "1Au?enseiter,",  "3Lebensbedurfnis,",  "2Kindheit",  "1Nomade,",  "3Heimatgefuhl,",
+            "2Wurzel,",  "3Nachhausekommen",  "3Mordsvergnugen",  "1Kriminalroman,",  "2Frage",  "1Kritiker,",  "3Kreuzwortratsel,",
+            "2Unterhaltungsliteratur",  "1Detektiv,",  "2Kurzgeschichte,",  "1Doppelmord,",  "2Literaturgeschichte",  "3Verbrechen,",
+            "1Ausgangspunkt,",  "1Fall,",  "2Handlung",  "1Hintergrund,",  "2Aufklarung",  "1Privatdetektiv,",  "2Suche",  "1Tater,",
+            "1Ermittler,",  "1Verleger,",  "1Star,",  "2Sammlung,",  "2Unterart,",  "3Grundkonzept,",  "2Serienfigur,",  "3Thermometer,",
+            "3Wohlbefinden",  "2Luftfeuchtigkeit",  "3subjektive",  "2Windstille",  "1Wetterdienst",  "2Wetterprognose,",  "1Durstloscher,",
+            "3Koffein",  "1Krautertee,",  "1Fruchtetee,",  "2Nahrungsaufnahme",  "1prallen",  "2UV-Strahlen",  "1Lichtschutzfaktor,",
+            "2Hitzewelle,",  "2Planungssunde,",  "1Stadtebau",  "2Abkuhlung",  "2Parkanlage,", "1Wortschatz",  "1Schreibstil",
+            "2Erzahltechnik,",  "1Schreibfluss",  "2Erzahlfigur,",  "3Leid",  "2Lekture",  "1Gesprachspartner,",
+            "3Bundesausbildungsforderungsgesetz",  "1Auszubildende,",  "2Fachschule,",  "3Abendgymnasium,",  "3Kolleg,",
+            "2Akademie,",  "1Absatz,",  "1Zuschuss,",  "2Ausbildungsstatte,",  "1Forderungsbetrag,",  "3Darlehen",  "1Gesamtbetrag",
+            "2Berufsfachschule,",  "2Fachoberschule,",  "2Abendhauptschule,",  "2Berufsaufbauschule,",  "2Abendrealschule,",
+            "2Regelstudienzeit",  "2Forderung",  "2Forderungshochstdauer"
     };
     String wordsc1[] =  new String[] {
             "2Manie,",  "3Navigationssystem,",  "2Sucht,",  "2Albernheit,",  "2Beschleunigung,",  "2Glosse,",  "1Held,",
@@ -535,7 +530,6 @@ public class ArtikelActivity extends AppCompatActivity {
     TextView wrong;
     TextView percent;
     SharedPreferences sPr;
-    ConstraintLayout constraintlayout;
 
     A1 a1=new A1();
     A2 a2=new A2();
@@ -546,8 +540,6 @@ public class ArtikelActivity extends AppCompatActivity {
     MainActivity m = new MainActivity();
     ConstraintLayout viewL;
 
-
-    // int points=getPoints();
     int points=0;
     int minuspoints = 0;
     int all=0;
@@ -558,16 +550,8 @@ public class ArtikelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artikel);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        int backgroundColor;  //ContextCompat.getColor(R.color.textViewBackColor,  null);
-      //  viewL = (ConstraintLayout) findViewById(R.id.constrainlayout);
-        //viewL.setBackgroundColor(m.back);
-
-      //  int backgroundColor = //resources.getColor(R.color.textViewBackColor,  null);
-
 
         viewL = (ConstraintLayout) findViewById(R.id.constrainlayout);
-
-       // String a=SkyBlue;
 
         viewL.setBackgroundColor(ContextCompat.getColor(ArtikelActivity.this, R.color.PowderBlue));
 
@@ -578,7 +562,6 @@ public class ArtikelActivity extends AppCompatActivity {
         wrong=findViewById(R.id.wrong);
         wrong.setText(minuspoints+"");
         percent = findViewById(R.id.percent);
-       // constraintlayout=findViewById(R.id.constraintlayout);
 
         derbutt=findViewById(R.id.der);
         diebutt=findViewById(R.id.die);
@@ -603,7 +586,6 @@ public class ArtikelActivity extends AppCompatActivity {
 
         }
         else{
-           // Toast.makeText(ArtikelActivity.this, "False", Toast.LENGTH_SHORT).show();
             derbutt.setBackgroundColor(ContextCompat.getColor(ArtikelActivity.this, R.color.LightCoral));
             minuspoints++;
             flagpoints = false;
@@ -622,7 +604,6 @@ public class ArtikelActivity extends AppCompatActivity {
             wortgeneration();
         }
         else{
-           // Toast.makeText(ArtikelActivity.this, "False", Toast.LENGTH_SHORT).show();
             diebutt.setBackgroundColor(ContextCompat.getColor(ArtikelActivity.this, R.color.LightCoral));
             minuspoints++;
             flagpoints = false;
@@ -636,7 +617,6 @@ public class ArtikelActivity extends AppCompatActivity {
         if(art == '3'){
             points++;
             sore.setText(points+"");
-           // viewL.setBackgroundColor(ContextCompat.getColor(ArtikelActivity.this, R.color.PowderBlue));
 
             derbutt.setBackgroundColor(ContextCompat.getColor(ArtikelActivity.this, R.color.SkyBlue));
             diebutt.setBackgroundColor(ContextCompat.getColor(ArtikelActivity.this, R.color.SkyBlue));
@@ -644,7 +624,6 @@ public class ArtikelActivity extends AppCompatActivity {
             wortgeneration();
         }
         else{
-           // Toast.makeText(ArtikelActivity.this, "False", Toast.LENGTH_SHORT).show();
             dasbutt.setBackgroundColor(ContextCompat.getColor(ArtikelActivity.this, R.color.LightCoral));
             minuspoints++;
             flagpoints = false;
@@ -665,7 +644,7 @@ public class ArtikelActivity extends AppCompatActivity {
             int t = (int)(Math.random()*wordsa1.length);
             wortnow = wordsa1[t].substring(1);
             per = (int)((pointdobl/wordsa1.length)*100);
-           // percent.setText(points + " " + wordsa1.length + " " + points/wordsa1.length);
+            // percent.setText(points + " " + wordsa1.length + " " + points/wordsa1.length);
             art= wordsa1[t].charAt(0);
         }
         else if(m.in_a2==true){
@@ -754,3 +733,4 @@ public class ArtikelActivity extends AppCompatActivity {
         savePoints();
     }
 }
+

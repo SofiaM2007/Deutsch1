@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/GreenYellowLite"
+    android:background="@color/GreenYellowDark"
     tools:context=".A2">
     <TextView
         android:id="@+id/textViewNameA2"
@@ -38,16 +38,16 @@
 
     <Button
         android:id="@+id/inf.pret.pert2"
-        android:layout_width="142dp"
-        android:layout_height="108dp"
+        android:layout_width="169dp"
+        android:layout_height="111dp"
         android:layout_marginBottom="220dp"
-        android:backgroundTint="@color/ForestGreen"
+        android:backgroundTint="@color/Green"
         android:onClick="go_to_glagaktivity"
         android:text="Infinitiv, Präteritum, Partizip II"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toEndOf="@+id/buttonArtikle"
         app:layout_constraintTop_toBottomOf="@+id/textViewNameA2"
         app:layout_constraintVertical_bias="0.0" />

@@ -18,12 +18,12 @@ public class B2 extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         m=new MainActivity();
         m.in_b2=true;
-        m.back= ContextCompat.getColor(null, R.color.liteorange);
-        m.butt= ContextCompat.getColor(null, R.color.orange);
+        //m.back= ContextCompat.getColor(null, R.color.liteorange);
+        //m.butt= ContextCompat.getColor(null, R.color.orange);
     }
     public void go_to_artikel_aktivity(View view) {
 
-        Intent intent = new Intent(this, ArtikelActivity.class); //Переход на активнось Store
+        Intent intent = new Intent(this, ArtikelActivity.class);
         startActivity(intent);
     }
 

@@ -26,7 +26,7 @@
         android:layout_width="142dp"
         android:layout_height="108dp"
         android:layout_marginBottom="132dp"
-        android:backgroundTint="@color/Lime"
+        android:backgroundTint="@color/LimeGreen"
         android:onClick="go_to_artikel_aktivity"
         android:text="Artikel"
         android:textSize="20sp"
@@ -41,7 +41,7 @@
         android:id="@+id/nom_akk"
         android:layout_width="142dp"
         android:layout_height="108dp"
-        android:backgroundTint="@color/Lime"
+        android:backgroundTint="@color/LimeGreen"
         android:onClick="go_to_padezh"
         android:text="Nom/Akk"
         android:textSize="20sp"
@@ -54,17 +54,34 @@
 
     <Button
         android:id="@+id/inf.pret.pert2"
-        android:layout_width="142dp"
-        android:layout_height="108dp"
-        android:backgroundTint="@color/Lime"
+        android:layout_width="164dp"
+        android:layout_height="105dp"
+        android:backgroundTint="@color/LimeGreen"
         android:onClick="go_to_glagaktivity"
         android:text="Infinitiv, Präteritum, Partizip II"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toEndOf="@+id/buttonArtikle"
         app:layout_constraintTop_toBottomOf="@+id/textViewNameA1"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonPlural"
+        android:layout_width="142dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="132dp"
+        android:backgroundTint="@color/LimeGreen"
+        android:text="Plural"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameA1"
+        app:layout_constraintVertical_bias="0.0" />
+    <!--android:onClick="go_to_plural_aktivity"
+            -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

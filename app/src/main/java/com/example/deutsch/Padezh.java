@@ -75,6 +75,7 @@ public class Padezh extends AppCompatActivity {
     static String wortnowe;
     static int indexb;
     static int indexe;
+    ///static String res;
 
 
     public void satza1(){
@@ -117,17 +118,16 @@ public class Padezh extends AppCompatActivity {
 
     public void check(View view) {
 
+
         if(weiter.getText().toString().equals("Prüfen")) {
+            String eingebenwort=editText.getText().toString();
+
 
             if (art == '1') {
                 if (editText.getText().toString().equals("den")) {
                     weiter.setText("➛");
                     weiter.setTextSize(40);
                     constraintlayout.setBackgroundColor(ContextCompat.getColor(Padezh.this, R.color.springgreen));
-                   // getWindow().setBackgroundDrawableResource(R.color.GreenYellow);
-                    //int textColor = resources.getColor(R.color.textViewFontColor);
-                  //  mInfoTextView.Beckground(R.color.GreenYellow);
-                 //   constraintlayout.setBackgroundColor(R.color.GreenYellow);
 
                 } else {
                     Toast.makeText(Padezh.this, "False", Toast.LENGTH_SHORT).show();

@@ -15,12 +15,6 @@ import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button a1;
-    Button a2;
-    Button b1;
-    Button b2;
-    Button c1;
-    Button c2;
 
     public static boolean in_a1 = false;
     public static boolean in_a2 = false;
@@ -48,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         in_b2 = false;
         in_c1 = false;
         in_c2 = false;
+        System.out.println("GO to A1");
         Intent intent = new Intent(this, A1.class); //Переход на активнось a1
         startActivity(intent);
 
@@ -59,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         in_b2 = false;
         in_c1 = false;
         in_c2 = false;
+        System.out.println("GO to A2");
         Intent intent = new Intent(this, A2.class); //Переход на активнось a2
         startActivity(intent);
 
