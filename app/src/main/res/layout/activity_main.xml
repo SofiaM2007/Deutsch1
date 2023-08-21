@@ -10,102 +10,85 @@
     tools:context=".MainActivity">
 
 
+
+
     <Button
         android:id="@+id/onA1"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="0dp"
         android:text="A1"
         android:onClick="go_to_A1_main"
         android:backgroundTint="@color/ForestGreen"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1666" />
 
     <Button
         android:id="@+id/onA2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="go_to_A2_main"
+        android:layout_height="0dp"
         android:text="A2"
+        android:onClick="go_to_A2_main"
         android:backgroundTint="@color/LimeGreen"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/onC2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/onA1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1666" />
 
     <Button
         android:id="@+id/onB1"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="@color/gold"
-        android:onClick="go_to_B1_main"
+        android:layout_height="0dp"
         android:text="B1"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:onClick="go_to_B1_main"
+        android:backgroundTint="@color/gold"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/onA2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1666" />
 
     <Button
         android:id="@+id/onB2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="@color/orange"
-        android:onClick="go_to_B2_main"
+        android:layout_height="0dp"
         android:text="B2"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:onClick="go_to_B2_main"
+        android:backgroundTint="@color/orange"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/onB1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624"
-        tools:ignore="DuplicateClickableBoundsCheck" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1666" />
 
     <Button
         android:id="@+id/onC1"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="@color/OrangeRed"
-        android:onClick="go_to_C1_main"
+        android:layout_height="0dp"
         android:text="C1"
+        android:onClick="go_to_C1_main"
+        android:backgroundTint="@color/OrangeRed"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/onB2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.812" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1666" />
 
     <Button
         android:id="@+id/onC2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="@color/red"
-        android:onClick="go_to_C2_main"
+        android:layout_height="0dp"
         android:text="C2"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:onClick="go_to_C2_main"
+        android:backgroundTint="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/onC1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1666" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

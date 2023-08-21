@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 
 public class A1 extends AppCompatActivity {
+
+
     public class MyDialogFragment extends DialogFragment {}
 
     MainActivity m;
@@ -38,6 +40,11 @@ public class A1 extends AppCompatActivity {
 
     public void go_to_glagaktivity(View view) {
         Intent intent = new Intent(this, glagol.class); //Переход на активнось Store
+        startActivity(intent);
+    }
+
+    public void go_to_reifolge_aktivity(View view) {
+        Intent intent = new Intent(this, ReinfolgeActivity.class); //Переход на активнось Store
         startActivity(intent);
     }
 

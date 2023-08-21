@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Deutsch">
         <activity
+            android:name=".ReinfolgeActivity"
+            android:exported="false" />
+        <activity
             android:name=".glagol"
             android:exported="false" />
         <activity

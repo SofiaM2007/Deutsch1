@@ -57,14 +57,8 @@ public class Padezh extends AppCompatActivity {
 
         constraintlayout = findViewById(R.id.constraintlayout);
 
-        //view = (LinearLayout) findViewById(R.id.constraintlayout);
-       // view.setBackgroundResource(R.color.GreenYellow);
-        //view.setBackgroundColor(ContextCompat.getColor(this, R.color.GreenYellow));
-    //    constraintlayout.setBackgroundColor(ContextCompat.getColor(Padezh.this, R.color.GreenYellow));
 
         satza1();
-
-
     }
 
     char art;
@@ -80,8 +74,6 @@ public class Padezh extends AppCompatActivity {
 
     public void satza1(){
         int t = (int)(Math.random()*2);
-
-
         if (t==0){
 
             indexb = (int)(Math.random()*16);
@@ -91,10 +83,6 @@ public class Padezh extends AppCompatActivity {
             art= endwohin[indexe].charAt(0);
             begin.setText(wortnowb+"");
             end.setText(wortnowe+"");
-
-
-
-
         }
         else{
 
@@ -109,12 +97,9 @@ public class Padezh extends AppCompatActivity {
 
         }
 
-
-
     }
 
 
- //   Resources resources = getResources();
 
     public void check(View view) {
 
@@ -161,9 +146,5 @@ public class Padezh extends AppCompatActivity {
             editText.setText("");
             satza1();
         }
-
-
     }
-
-
 }
