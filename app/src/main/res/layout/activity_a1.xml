@@ -73,6 +73,7 @@
         android:layout_height="108dp"
         android:layout_marginBottom="132dp"
         android:backgroundTint="@color/LimeGreen"
+        android:onClick="go_to_plurale"
         android:text="Plural"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -97,7 +98,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonArtikle"
         app:layout_constraintVertical_bias="0.0" />
-    <!--android:onClick="go_to_plural_aktivity"
-            -->
+
+    <Button
+        android:id="@+id/buttonHabenSein"
+        android:layout_width="155dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/LimeGreen"
+        android:onClick="go_to_haben_sein_aktivity"
+        android:text="haben/sein im Präteritum "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nom_akk"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <Button
+        android:id="@+id/buttonKeinNicht"
+        android:layout_width="155dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/LimeGreen"
+        android:onClick="go_to_kein_nicht_aktivity"
+        android:text="kein/nicht mit Nomen"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toEndOf="@+id/buttonHabenSein"
+        app:layout_constraintTop_toBottomOf="@+id/inf.pret.pert2"
+        app:layout_constraintVertical_bias="0.07" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

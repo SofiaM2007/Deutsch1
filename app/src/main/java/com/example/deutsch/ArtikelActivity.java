@@ -1,6 +1,5 @@
 package com.example.deutsch;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -517,9 +516,47 @@ public class ArtikelActivity extends AppCompatActivity {
             "2Mimik",  "3Modul,",  "1Proband,",  "1Raumfahrer,",  "1Roboter,",  "1Sensor,",  "3Reagenzglas,",  "2Norm,",  "1Rohstoff,"
     };
     String wordsc2[] =  new String[] {
-            "1", "2"
+            "1 Atem", "1 Mensch", "2 Zeit", "3 Jahr", "2 Welt", "2 Arbeit", "2 Frage", "2 Antwort", "3 Leben", "3 Problem",
+            "2 Möglichkeit", "2 Situation", "1 Grund", "2 Bedeutung", "2 Beziehung", "2 Liebe", "2 Familie", "2 Freundschaft",
+            "2 Gesellschaft", "2 Kultur", "2 Sprache", "2 Kunst", "2 Wissenschaft", "2 Politik", "2 Wirtschaft", "2 Technologie",
+            "3 Verständnis", "2 Erfahrung", "2 Emotion", "2 Kommunikation", "2 Information", "3 Wissen", "2 Bildung",
+            "2 Entwicklung", "2 Veränderung", "2 Zukunft", "2 Vergangenheit", "2 Gegenwart", "3 Ziel", "2 Lösung", "3 System",
+            "2 Struktur", "2 Funktion", "2 Form", "2 Farbe", "3 Material", "2 Energie", "2 Natur", "2 Umwelt", "2 Gesundheit",
+            "2 Krankheit", "2 Medizin", "2 Psychologie", "2 Philosophie", "2 Religion", "2 Ethik", "2 Moral", "2 Freiheit",
+            "2 Verantwortung", "3 Recht", "2 Pflicht", "2 Demokratie", "2 Regierung", "2 Gesetzgebung", "2 Justiz", "2 Bildung",
+            "2 Kunst", "2 Literatur", "2 Musik", "2 Architektur", "2 Mode", "2 Unterhaltung", "2 Forschung", "2 Innovation",
+            "2 Industrie", "2 Landwirtschaft", "2 Umweltschutz", "2 Globalisierung", "2 Migration", "2 Integration",
+            "2 Vielfalt", "2 Identität", "2 Kommunikation", "2 Interaktion", "2 Begegnung", "2 Kooperation", "2 Konkurrenz",
+            "2 Krise", "2 Chance", "2 Hoffnung", "2 Trauer", "2 Freude", "2 Leidenschaft", "2 Toleranz", "2 Intoleranz",
+            "2 Vorurteile", "2 Diskriminierung", "2 Akzeptanz", "2 Diversität", "2 Solidarität", "2 Abenteuer", "2 Absicht",
+            "1 Abstimmung", "1 Abteilung", "1 Ähnlichkeit", "2 Aktion", "2 Aktivität", "1 Allgemeinheit", "3 Alltag",
+            "2 Alter", "1 Anblick", "2 Anforderung", "2 Anfrage", "2 Angabe", "2 Angelegenheit", "2 Angebot", "1 Angriff",
+            "1 Anhaltspunkt", "2 Anlage", "1 Ankunft", "1 Anlass", "2 Anleitung", "2 Anmerkung", "1 Anordnung",
+            "1 Anpassung", "2 Anruf", "2 Ansehen", "1 Anstrengung", "2 Ansicht", "2 Anspielung", "2 Anwendung", "2 Anzahl",
+            "1 Arbeitgeber", "2 Arbeitsplatz", "1 Architektur", "1 Art", "2 Aufgabe", "1 Aufmerksamkeit", "2 Aufnahme",
+            "2 Aufregung", "1 Aufwand", "1 Aufzug", "2 Ausbildung", "2 Ausdruck", "1 Auseinandersetzung", "2 Ausnahme",
+            "1 Ausstellung", "2 Aussicht", "2 Ausstattung", "1 Auswirkung", "2 Auswahl", "2 Ausrüstung", "2 Aussage",
+            "2 Ausstellung", "2 Ausweg", "2 Auto", "2 Bachelor", "2 Bedarf", "1 Bedeutung", "2 Bedingung", "1 Begegnung",
+            "1 Begleitung", "2 Behandlung", "2 Behörde", "2 Beitrag", "2 Beziehung", "2 Bewertung", "1 Bevölkerung",
+            "1 Bewegung", "1 Bewusstsein", "1 Beziehung", "2 Bibliothek", "1 Bildung", "2 Botschaft", "2 Brief", "2 Brücke",
+            "1 Büro", "1 Chaos", "2 Chance", "1 Charakter", "2 Chef", "2 Dank", "2 Defizit", "2 Detail", "1 Dialog",
+            "2 Differenz", "2 Diplomatie", "1 Direktor", "1 Diskussion", "1 Dokument", "1 Dramatik", "1 Ebene", "1 Ehe",
+            "2 Eindruck", "1 Einfluss", "2 Eingang", "2 Einheit", "2 Einkommen", "1 Einsicht", "2 Einsatz", "1 Eintritt",
+            "2 Einzelheit", "1 Erfahrung", "1 Ergebnis", "2 Ereignis", "2 Erfindung", "2 Erfolg", "2 Erklärung", "2 Erlebnis",
+            "2 Ermittlung", "2 Erwartung", "2 Erziehung", "1 Fach", "1 Fähigkeit", "2 Fehler", "1 Feier", "2 Feind",
+            "2 Feld", "2 Forderung", "1 Form", "2 Frage", "2 Freiheit", "1 Freund", "1 Freundschaft", "1 Frist", "2 Führung",
+            "2 Funktion", "2 Fundament", "2 Zukunft", "2 Gebiet", "2 Gedanke", "1 Gegenwart", "1 Gelegenheit", "2 Geltung",
+            "2 Generation", "2 Gesellschaft", "1 Geschäft", "2 Geschichte", "2 Geschwindigkeit", "1 Gesetz", "2 Gewicht",
+            "1 Gewinn", "2 Grenze", "2 Grund", "1 Grundsatz", "1 Grundlage", "2 Gruppe", "1 Gültigkeit", "2 Hilfe",
+            "2 Idee", "1 Identität", "2 Illusion", "1 Image", "1 Information", "1 Initiative", "2 Institution",
+            "1 Intelligenz", "2 Interesse", "2 Interpretation", "2 Jahreszeit", "2 Kandidat", "2 Kantine", "1 Kapazität",
+            "1 Karriere", "1 Kette", "1 Kindheit", "2 Kommunikation", "2 Konkurrenz", "2 Konsequenz", "2 Kontakt",
+            "2 Konzept", "1 Kopf", "2 Körper", "1 Kraft", "1 Krankheit", "1 Kreativität", "2 Kritik", "1 Kultur",
+            "1 Kunst", "1 Kurs", "2 Lage", "2 Land", "1 Laune", "1 Leben", "1 Leistung", "1 Liebe", "1 Logik", "1 Lösung",
+            "2 Lust", "2 Macht", "1 Maßnahme", "1 Material", "1 Methode", "2 Mitteilung", "2 Moment", "1 Monat",
+            "2 Motivation", "2 Möglichkeit", "2 Musik", "2 Mut"
     };
-
+//напиши все немецкие существительные которые учат на уровне с2 в таком виде"слово", "слово", род указать как цифра перед словом на пример 1Atem 2-der 2-die 3-das
 
     Button derbutt;
     Button diebutt;

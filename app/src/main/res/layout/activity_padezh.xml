@@ -1,70 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
-    android:id="@+id/constraintlayout"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-    android:background="@color/MistyRose"
+    android:orientation="vertical"
+    android:background="@color/lightGreen"
+    android:id="@+id/Layout"
+    android:padding="16dp"
     tools:context=".Padezh">
 
-    <EditText
-        android:id="@+id/message"
-        android:layout_width="241dp"
-        android:layout_height="48dp"
-        android:gravity="top"
-        android:hint="Введите сообщение"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
-
     <TextView
-        android:id="@+id/begin"
-        android:layout_width="241dp"
-        android:layout_height="47dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/message"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question text will be here"
+        android:textSize="18sp"/>
 
-    <TextView
-        android:id="@+id/end"
-        android:layout_width="241dp"
-        android:layout_height="47dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/message"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/answerRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answerOption1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="der"/>
+
+                <RadioButton
+                    android:id="@+id/answerOption2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="die"/>
+
+                <RadioButton
+                    android:id="@+id/answerOption3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="das"/>
+
+                <RadioButton
+                    android:id="@+id/answerOption4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dem"/>
+
+                <RadioButton
+                    android:id="@+id/answerOption5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="den"/>
+
+
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
 
     <Button
-        android:id="@+id/check"
-        android:layout_width="183dp"
-        android:layout_height="99dp"
-        android:backgroundTint="@color/AntiqueWhite"
-        android:onClick="check"
-        android:text="➛"
-        android:textColor="?android:attr/textColorPrimaryNoDisable"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.982"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:id="@+id/submitButton"
+        android:backgroundTint="@color/LimeGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

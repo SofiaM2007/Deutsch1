@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Deutsch">
         <activity
+            android:name=".KeinNicht"
+            android:exported="false" />
+        <activity
+            android:name=".HabenSein"
+            android:exported="false" />
+        <activity
+            android:name=".Plural"
+            android:exported="false" />
+        <activity
             android:name=".ReinfolgeActivity"
             android:exported="false" />
         <activity

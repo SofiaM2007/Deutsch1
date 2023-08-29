@@ -1,7 +1,6 @@
 package com.example.deutsch;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;

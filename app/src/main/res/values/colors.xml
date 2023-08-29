@@ -9,6 +9,8 @@
     <color name="red">#FF0000</color>
     <color name="FireBrick">#B22222</color>
     <color name="DarkRed">#8B0000</color>
+    <color name="lightRed">#FF9090</color>
+    <color name="lightDarkRed">#FF4444</color>
 
     <color name="Pink">#FFC0CB</color>
     <color name="LightPink">#FFB6C1</color>
@@ -71,6 +73,7 @@
     <color name="Maroon">#800000</color>
 
     <color name="GreenYellowDark">#FF2DBA28</color>
+    <color name="lightGreen">#91FF8D</color>
 
     <color name="GreenYellow">#ADFF2F</color>
     <color name="Chartreuse">#7FFF00</color>
